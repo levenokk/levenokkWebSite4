@@ -1,9 +1,278 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "function";
 
+//  <========default styles ========> //
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  @include lato();
+}
 
+html {
+  font-size: 14px;
+}
 
+a {
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+//  <======== end default styles========> //
+//  <======== header ========> //
+
+.header {
+  background-position: top center;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 15px;
+  margin-bottom: 100px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 270px;
+  a {
+    color: #fff;
+  }
+  .nav {
+    ul li {
+      font-weight: black;
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 18px;
+      margin-left: 64px;
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+    &__social {
+      ul li {
+        margin-left: 12px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+.header__main {
+  max-width: 300px;
+  width: 100%;
+}
+
+.header__main__text {
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 25px;
+  &-under {
+    margin-bottom: 66px;
+  }
+}
+
+.title {
+  font-size: 80px;
+  line-height: 70px;
+  margin-bottom: 18px;
+  font-weight: black;
+  text-transform: uppercase;
+}
+
+.title__text {
+  color: #aa3a67;
+  background: linear-gradient(to right, #aa3a67, #fb806b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__btn {
+  a {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 45px 15px 45px;
+    border-top: 3px solid #aa3a67;
+    border-bottom: 3px solid #fb806b;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: 3px 100%;
+    -moz-background-size: 3px 100%;
+    background-size: 3px 100%;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhNGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=),
+      url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhNGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+    background-image: -webkit-linear-gradient(top, #aa3a67 0%, #fb806b 100%),
+      -webkit-linear-gradient(top, #aa3a67 0%, #aa3a67 100%);
+    background-image: -moz-linear-gradient(top, #aa3a67 0%, #fb806b 100%),
+      -moz-linear-gradient(top, #aa3a67 0%, #fb806b 100%);
+    background-image: -o-linear-gradient(top, #aa3a67 0%, #fb806b 100%),
+      -o-linear-gradient(top, #aa3a67 0%, #fb806b 100%);
+    background-image: linear-gradient(to bottom, #aa3a67 0%, #fb806b 100%),
+      linear-gradient(to bottom, #aa3a67 0%, #fb806b 100%);
+  }
+}
+
+//  <======== header ========> //
+//  <======== services ========> //
+
+.services {
+  padding-bottom: 60px;
+}
+
+.services__title {
+  font-weight: black;
+  font-size: 32px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services_posts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.services__post {
+  margin: 20px 15px;
+  width: 350px;
+  text-align: center;
+  color: #fff;
+  padding: 30px 10px;
+  border-radius: 5px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  h5 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 210px;
+  }
+  p {
+    padding: 0 20px;
+  }
+}
+.price {
+  margin-bottom: 35px;
+  strong {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  span {
+    font-size: 30px;
+    vertical-align: top;
+  }
+}
+
+.post__btn {
+  font-size: 24px;
+  border: 4px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 22px 76px 21px 76px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+.author {
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+.author__ico {
+  color: #fff;
+  margin-right: 9px;
+}
+
+.post__description {
+  font-size: 12px;
+}
+
+.service__description {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+//  <======== services ========> //
+//  <======== trajectoria ========> //
+
+.trajectoria {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+  padding-top: 155px;
+  color: #fff;
+}
+.trajectoria__inner {
+  float: right;
+  max-width: 540px;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.trajectoria__title {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: black;
+  margin-bottom: 65px;
+}
+
+.trajectoria__text {
+  margin-bottom: 85px;
+  font-size: 22px;
+}
+
+.trajectoria__list{
+    li{
+        margin-left: 108px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+        list-style-image: url('../img/round.png');
+    }
+}
+//  <======== trajectoria ========> //
 
 @import "media";
