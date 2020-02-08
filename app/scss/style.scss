@@ -56,13 +56,12 @@ ol {
 //  <======== header ========> //
 
 .header {
-  background-position: top center;
+  background-position: center top;
   background-color: black;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
-  height: 100vh;
   padding-top: 15px;
-  margin-bottom: 100px;
+  padding-bottom: 365px;
 }
 
 .header__nav {
@@ -95,8 +94,9 @@ ol {
   }
 }
 .header__main {
-  max-width: 300px;
+  max-width: 365px;
   width: 100%;
+  // padding-bottom: 360px;
 }
 
 .header__main__text {
@@ -238,11 +238,15 @@ ol {
 
 .trajectoria {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  height: 100vh;
-  padding-top: 155px;
+  background-size: auto;
+  background-position: center top;
   color: #fff;
+  padding-top: 160px;
+  .container::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 .trajectoria__inner {
   float: right;
@@ -270,7 +274,20 @@ ol {
         margin-left: 108px;
         padding-left: 50px;
         padding-bottom: 40px;
-        list-style-image: url('../img/round.png');
+        position: relative;
+        border-left: 3px solid #fff;
+        &::before{
+          content: "";
+          display: block;
+          width: 24px;
+          height: 24px;
+          border: 5px solid #f97e6b;
+          border-radius: 50%;
+          background-color: transparent;
+          position: absolute;
+          left: 0;
+          top:3px
+        }
     }
 }
 //  <======== trajectoria ========> //
