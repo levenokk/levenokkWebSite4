@@ -13,11 +13,14 @@
 </head>
 
 <body>
-
-  <header class="header" style="background-image:url(img/header.png)">
+  <header class="header" data-device='yes' style="background-image:url(img/header.png)">
     <div class="container">
-
-      <div class="header__nav">
+      <button class="mobile__btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header__nav animated faster">
         <nav class="nav">
           <ul>
             <li><a href="">Ingressos</a></li>
@@ -74,7 +77,7 @@
             <span class="price__inner-top">$</span class="price__inner-top"><strong>100</strong><span
               class="price__inner-top">,00</span>
           </div>
-          <a href="#" class="post__btn">Lorem ipsum</a>
+          <a href="#" class="post__btn">Купить билет</a>
           <p class="author">
             <span class="author__ico"><i class="far fa-user"></i></span> Lorem ipsum dolor sit amet
           </p>
@@ -83,7 +86,6 @@
             justo.
           </p>
         </article>
-
         <article class='services__post' style="background-image: url(img/img2.png);">
           <h5>
             Lorem ipsum
@@ -92,7 +94,7 @@
             <span class="price__inner-top">$</span class="price__inner-top"><strong>50</strong><span
               class="price__inner-top">,00</span>
           </div>
-          <a href="#" class="post__btn">Lorem ipsum</a>
+          <a href="#" class="post__btn">забронировать место</a>
           <p class="author">
             <span class="author__ico"><i class="far fa-user"></i></span> Lorem ipsum dolor sit amet
           </p>
@@ -108,7 +110,7 @@
       </p>
     </div>
   </div>
-  <div class="trajectoria" style="background-image: url('img/trajectoria.png');">
+  <div class="trajectoria " data-device='yes' style="background-image: url('img/trajectoria.png');">
     <div class="container">
       <div class="trajectoria__inner">
         <h3 class="trajectoria__title">
@@ -125,16 +127,13 @@
               </div>
               <div class="proggress__trajectoria-line">
                 <div class="proggress__trajectoria-round">
-
                 </div>
                 <div class="proggress__trajectoria-line-inner">
-
                 </div>
               </div>
             </div>
             <div class="trajectoria__list-text">
               <p>
-
                 Lorem ipsum dolor sit amet consectetur, adipiscing elit phasellus posuere placerat, conubia dictum.
 
               </p>
@@ -147,10 +146,8 @@
               </div>
               <div class="proggress__trajectoria-line">
                 <div class="proggress__trajectoria-round">
-
                 </div>
                 <div class="proggress__trajectoria-line-inner">
-
                 </div>
               </div>
             </div>
@@ -288,15 +285,14 @@
       <a href="#" class="post__btn">Lorem ipsum</a>
     </div>
   </div>
-  <div class="map" style="background-image: url(img/Map.png);">
+  <div class="map " data-device='yes' style="background-image: url(img/Map.png);">
     <div class="container">
-
       <div class="map-marker" style="left: 10%; top: 80%" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
         data-aos-delay='500'>
         <i class="fas fa-map-marker"></i>
         <div class="market__info">
           <p>
-            o xz 1
+            lorem
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur 1
@@ -311,13 +307,12 @@
         <i class="fas fa-map-marker"></i>
         <div class="market__info">
           <p>
-            o xz 1
+            text
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur 1
-          </p>
+            text </p>
           <p>
-            Lorem 1
+            text
           </p>
         </div>
       </div>
@@ -326,13 +321,13 @@
         <i class="fas fa-map-marker"></i>
         <div class="market__info">
           <p>
-            o xz 1
+            test
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur 1
+            Lorem ipsum dolor sit amet consectetur
           </p>
           <p>
-            Lorem 1
+            Lorem
           </p>
         </div>
       </div>
@@ -341,13 +336,13 @@
         <i class="fas fa-map-marker"></i>
         <div class="market__info">
           <p>
-            o xz 2
+            title 1
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur 2
+            Lorem ipsum dolor sit amet consectetur 1
           </p>
           <p>
-            Lorem 2
+            Lorem 1
           </p>
         </div>
       </div>
@@ -381,9 +376,6 @@
           </p>
         </div>
       </div>
-
-
-
       <div class="description-show">
         <h5>
           o show
@@ -424,9 +416,13 @@
       </nav>
     </div>
   </footer>
+  <div class="up-arrow">
+    <i class="fas fa-angle-double-up"></i>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/libs.min.js"></script>
+  <script src="js/device.js"></script>
   <script src="js/main.js"></script>
 </body>
 

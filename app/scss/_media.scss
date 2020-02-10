@@ -1,0 +1,138 @@
+@media (max-width: 831px) {
+  .header {
+    height: 800px;
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .header__main__text {
+    font-size: 25px;
+  }
+
+  .header__btn {
+    a {
+      padding: 13px 32px 13px 32px;
+      font-size: 20px;
+    }
+  }
+
+  .header__nav {
+    padding-top: 100px;
+    background-color: #7a00f9;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    margin-bottom: 0;
+    &-open {
+      display: block;
+    }
+  }
+
+  .nav {
+    text-align: center;
+    ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    &__social {
+      ul li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .mobile__btn {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 20px;
+  }
+
+  .header__main {
+    margin-top: 230px;
+  }
+}
+
+@media (max-width: 540px) {
+  .trajectoria__title {
+    font-size: 36px;
+  }
+
+  .trajectoria__text {
+    font-size: 20px;
+  }
+
+  .trajectoria__list-text {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+  .proggress__trajectoria {
+    max-width: 130px;
+  }
+
+  .proggress__trajectoria-date {
+    font-size: 30px;
+  }
+
+  .footer {
+    .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+    }
+  }
+
+  .footer__description {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 64px;
+  }
+  .header__main__text {
+    font-size: 22px;
+  }
+  .header__btn {
+    a {
+      padding: 11px 30px 11px 30px;
+      font-size: 20px;
+    }
+  }
+  .service__description {
+    font-size: 16px;
+  }
+  .services__post {
+    h5 {
+      font-size: 26px;
+      margin-bottom: 125px;
+    }
+    .price {
+      strong {
+        font-size: 65px;
+      }
+    }
+  }
+  .post__btn {
+    font-size: 22px;
+    padding: 19px 18px 19px 18px;
+  }
+  .proggress__trajectoria-date {
+    font-size: 28px;
+  }
+  .proggress__trajectoria {
+    max-width: 100px;
+  }
+}
