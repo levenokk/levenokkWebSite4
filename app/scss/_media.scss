@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+@media(min-width: 832px){
+  body{
+    position: static !important;
+  }
+}
+>>>>>>> master
 @media (max-width: 831px) {
   .header {
     height: 800px;
@@ -21,17 +29,33 @@
   .header__nav {
     padding-top: 100px;
     background-color: #7a00f9;
+<<<<<<< HEAD
     display: none;
     position: absolute;
+=======
+    display: block;
+    position: absolute;
+    z-index: -100;
+    margin-bottom: 0;
+>>>>>>> master
     bottom: 0;
     left: 0;
     right: 0;
     top: 0;
     height: 100vh;
+<<<<<<< HEAD
     z-index: 100;
     margin-bottom: 0;
     &-open {
       display: block;
+=======
+    opacity: 0;
+    transition: all 0.3s linear;
+    &-open {
+      opacity: 1;
+      z-index: 100;
+      transition: all 0.3s linear;
+>>>>>>> master
     }
   }
 
@@ -89,7 +113,11 @@
     .container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
+<<<<<<< HEAD
               flex-direction: column;
+=======
+      flex-direction: column;
+>>>>>>> master
     }
   }
 
